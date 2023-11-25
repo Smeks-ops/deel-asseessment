@@ -1,4 +1,3 @@
-const { Contract } = require('../models/model');
 const { findContractById } = require('../services/contractService');
 
 const getContractById = async (req, res) => {
