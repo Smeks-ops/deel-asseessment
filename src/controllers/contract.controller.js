@@ -45,9 +45,7 @@ const getActiveContracts = async (req, res) => {
     });
   } catch (error) {
     if (error.message === 'Validation error') {
-      res
-        .status(400)
-        .json({ message: 'Contract id and profile id are required' });
+      res.status(400).json({ message: 'Profile id is required' });
     } else {
       res.status(500).json({ message: 'Internal Server Error' });
     }
