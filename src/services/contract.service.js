@@ -20,6 +20,23 @@ const findContractForUserById = async (id, profileId) => {
   return contract;
 };
 
+const getActiveContractsForUser = async (profileId) => {
+  if (!profileId) {
+    throw new Error('Validation error');
+  }
+
+  const activeContracts = await Contract.findAll({
+    where: {
+      [Op.or]: [{ ClientId: profileId }, { ContractorId: profileId }],
+      status: {
+        [Op.ne]: 'terminated', // not equal
+      },
+    },
+  });
+  return activeContracts;
+};
+
 module.exports = {
   findContractForUserById,
+  getActiveContractsForUser,
 };

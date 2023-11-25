@@ -1,4 +1,7 @@
-const { findContractForUserById } = require('../services/contract.service');
+const {
+  findContractForUserById,
+  getActiveContractsForUser,
+} = require('../services/contract.service');
 
 const getContractById = async (req, res) => {
   const { id } = req.params;
@@ -28,6 +31,30 @@ const getContractById = async (req, res) => {
   }
 };
 
+const getActiveContracts = async (req, res) => {
+  try {
+    const profileId = req.profile.id;
+    const contracts = await getActiveContractsForUser(profileId);
+    res.json({
+      status: 'success',
+      code: 200,
+      data: {
+        contracts,
+      },
+      message: 'Contracts fetched successfully',
+    });
+  } catch (error) {
+    if (error.message === 'Validation error') {
+      res
+        .status(400)
+        .json({ message: 'Contract id and profile id are required' });
+    } else {
+      res.status(500).json({ message: 'Internal Server Error' });
+    }
+  }
+};
+
 module.exports = {
   getContractById,
+  getActiveContracts,
 };
