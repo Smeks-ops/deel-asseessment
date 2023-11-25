@@ -1,0 +1,469 @@
+{
+	"info": {
+		"_postman_id": "5ecc8546-ab5b-4296-ac11-3815ed7e0f5a",
+		"name": "Deel Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16662064"
+	},
+	"item": [
+		{
+			"name": "Get contract by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/contracts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"contracts",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get contract by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "profile_id",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/contracts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"contracts",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "254"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"fe-K9lUIpybyYcyG3qLPWL7GV0wbdI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Nov 2023 03:08:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"code\": 200,\n    \"data\": {\n        \"contract\": {\n            \"id\": 1,\n            \"terms\": \"bla bla bla\",\n            \"status\": \"terminated\",\n            \"createdAt\": \"2023-11-25T02:05:03.280Z\",\n            \"updatedAt\": \"2023-11-25T02:05:03.280Z\",\n            \"ContractorId\": 5,\n            \"ClientId\": 1\n        }\n    },\n    \"message\": \"Contract fetched successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get contract by id Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/contracts/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"contracts",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get contract by id Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "profile_id",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/contracts/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"contracts",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "259"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"103-bY8OsIf/RPNASL9+K7xym0cyRN0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Nov 2023 03:22:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"code\": 200,\n    \"data\": {\n        \"contracts\": [\n            {\n                \"id\": 2,\n                \"terms\": \"bla bla bla\",\n                \"status\": \"in_progress\",\n                \"createdAt\": \"2023-11-25T02:05:03.280Z\",\n                \"updatedAt\": \"2023-11-25T02:05:03.280Z\",\n                \"ContractorId\": 6,\n                \"ClientId\": 1\n            }\n        ]\n    },\n    \"message\": \"Contracts fetched successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get unpaid jobs for a user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/jobs/unpaid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"jobs",
+						"unpaid"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get contract by id Copy 2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "profile_id",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/jobs/unpaid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"jobs",
+								"unpaid"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "433"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b1-DghNbomhaivTXztRHM36F+MqC5M\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Nov 2023 03:49:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"code\": 200,\n    \"data\": {\n        \"jobs\": [\n            {\n                \"id\": 2,\n                \"description\": \"work\",\n                \"price\": 201,\n                \"paid\": null,\n                \"paymentDate\": null,\n                \"createdAt\": \"2023-11-25T02:05:03.280Z\",\n                \"updatedAt\": \"2023-11-25T02:05:03.280Z\",\n                \"ContractId\": 2,\n                \"Contract\": {\n                    \"id\": 2,\n                    \"terms\": \"bla bla bla\",\n                    \"status\": \"in_progress\",\n                    \"createdAt\": \"2023-11-25T02:05:03.280Z\",\n                    \"updatedAt\": \"2023-11-25T02:05:03.280Z\",\n                    \"ContractorId\": 6,\n                    \"ClientId\": 1\n                }\n            }\n        ]\n    },\n    \"message\": \"Unpaid jobs fetched successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Pay for a job",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/jobs/2/pay",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"jobs",
+						"2",
+						"pay"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get unpaid jobs for a user Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "profile_id",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/jobs/2/pay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"jobs",
+								"2",
+								"pay"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "634"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"27a-KEqkUIuN1XrDHaetm8MBGRd5q3g\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Nov 2023 03:55:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Payment successful\",\n    \"code\": 200,\n    \"data\": {\n        \"job\": {\n            \"job\": {\n                \"id\": 2,\n                \"description\": \"work\",\n                \"price\": 201,\n                \"paid\": true,\n                \"paymentDate\": \"2023-11-25T03:55:38.901Z\",\n                \"createdAt\": \"2023-11-25T03:55:24.575Z\",\n                \"updatedAt\": \"2023-11-25T03:55:38.901Z\",\n                \"ContractId\": 2,\n                \"Contract\": {\n                    \"id\": 2,\n                    \"terms\": \"bla bla bla\",\n                    \"status\": \"in_progress\",\n                    \"createdAt\": \"2023-11-25T03:55:24.574Z\",\n                    \"updatedAt\": \"2023-11-25T03:55:24.574Z\",\n                    \"ContractorId\": 6,\n                    \"ClientId\": 1\n                }\n            },\n            \"client\": {\n                \"id\": 1,\n                \"firstName\": \"Harry\",\n                \"lastName\": \"Potter\",\n                \"profession\": \"Wizard\",\n                \"balance\": 949,\n                \"type\": \"client\",\n                \"createdAt\": \"2023-11-25T03:55:24.572Z\",\n                \"updatedAt\": \"2023-11-25T03:55:38.896Z\"\n            }\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Deposit money to a client balance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/clients/balances/deposit/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"clients",
+						"balances",
+						"deposit",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Pay for a job Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "profile_id",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/clients/balances/deposit/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"clients",
+								"balances",
+								"deposit",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "473"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d9-X1L8OUdbk29HMRq2nMCr04gIovk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Nov 2023 04:31:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Deposit successful\",\n    \"status\": \"success\",\n    \"code\": 200,\n    \"data\": {\n        \"updatedClient\": {\n            \"profileUser\": {\n                \"id\": 1,\n                \"firstName\": \"Harry\",\n                \"lastName\": \"Potter\",\n                \"profession\": \"Wizard\",\n                \"balance\": 889,\n                \"type\": \"client\",\n                \"createdAt\": \"2023-11-25T03:55:24.572Z\",\n                \"updatedAt\": \"2023-11-25T04:31:04.499Z\"\n            },\n            \"clientUser\": {\n                \"id\": 2,\n                \"firstName\": \"Mr\",\n                \"lastName\": \"Robot\",\n                \"profession\": \"Hacker\",\n                \"balance\": 291.11,\n                \"type\": \"client\",\n                \"createdAt\": \"2023-11-25T03:55:24.573Z\",\n                \"updatedAt\": \"2023-11-25T04:31:04.501Z\"\n            }\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}
