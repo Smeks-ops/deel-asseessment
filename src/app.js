@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const { sequelize } = require('./models/model');
 const { getProfile } = require('./middleware/getProfile');
 
-const contractsRoutes = require('./routes/contracts');
+const contractsRoutes = require('./routes/contracts.routes');
 
 const app = express();
 

@@ -1,4 +1,4 @@
-const { findContractForUserById } = require('../services/contractService');
+const { findContractForUserById } = require('../services/contract.service');
 
 const getContractById = async (req, res) => {
   const { id } = req.params;
