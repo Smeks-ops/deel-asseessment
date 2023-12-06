@@ -6,6 +6,7 @@ const { getProfile } = require('./middleware/getProfile');
 const contractsRoutes = require('./routes/contracts.routes');
 const jobsRoutes = require('./routes/job.routes');
 const clientRoutes = require('./routes/client.routes');
+const adminRoutes = require('./routes/admin.routes');
 
 const app = express();
 
@@ -28,4 +29,5 @@ app.set('models', sequelize.models);
 app.use('/contracts', contractsRoutes);
 app.use('/jobs', jobsRoutes);
 app.use('/clients', clientRoutes);
+app.use('/admin', adminRoutes);
 module.exports = app;
