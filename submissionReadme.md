@@ -31,10 +31,8 @@ The API documentation, including detailed endpoint descriptions, request/respons
 3. GET /jobs/unpaid: Retrieve all unpaid jobs for active contracts of the authenticated user.
 4. POST /jobs/:job_id/pay: Pay for a job, transferring funds from a client to a contractor.
 5. POST /balances/deposit/:userId: Deposit funds into a client's balance.
-
-## Endpoint Yet to be Implemented
-1. GET /admin/best-profession: Find the highest-earning profession in a given time range.
-2. GET /admin/best-clients: List top-paying clients in a specified period.
+6. GET /admin/best-profession: Find the highest-earning profession in a given time range.
+7. GET /admin/best-clients: List top-paying clients in a specified period.
 
 # Technical Considerations
 
@@ -50,7 +48,6 @@ The API documentation, including detailed endpoint descriptions, request/respons
 
 # Future Improvements
 Given more time and resources, I would have loved to include the following features and improvements as further proof of my experience and skills:
-- Implement the remaining endpoints.
 - Add unit tests for the application.
 - Add API documentation using Swagger.
 - Advanced Authentication and Authorization: Implementing JWT (JSON Web Tokens) or OAuth for more robust user authentication and role-based access control.
