@@ -11,7 +11,7 @@
   "scripts": {
     "start": "nodemon ./src/server.js",
     "seed": "node ./scripts/seedDb.js",
-    "test": "mocha"
+    "test": "npx jest"
   },
   "devDependencies": {
     "chai": "^4.3.10",
