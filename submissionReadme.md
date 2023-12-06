@@ -34,6 +34,13 @@ The API documentation, including detailed endpoint descriptions, request/respons
 6. GET /admin/best-profession: Find the highest-earning profession in a given time range.
 7. GET /admin/best-clients: List top-paying clients in a specified period.
 
+## Tests Implemented
+Tests can be run by running the following command in the root folder of the project:
+```npm test
+```
+1. GET /contracts/:id: Fetch a specific contract by its ID.
+2. GET /contracts: List non-terminated contracts for the authenticated user.
+
 # Technical Considerations
 
 ## Transactions
@@ -48,7 +55,7 @@ The API documentation, including detailed endpoint descriptions, request/respons
 
 # Future Improvements
 Given more time and resources, I would have loved to include the following features and improvements as further proof of my experience and skills:
-- Add unit tests for the application.
+- Add more unit tests for the application.
 - Add API documentation using Swagger.
 - Advanced Authentication and Authorization: Implementing JWT (JSON Web Tokens) or OAuth for more robust user authentication and role-based access control.
 - Microservices Architecture: Refactoring the application into microservices for better scalability, maintainability, and deployment.
